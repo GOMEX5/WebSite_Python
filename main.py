@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 PORT = 5000
@@ -9,8 +9,12 @@ def not_found(error):
     return "Not Found."
 
 @app.route('/', methods=['GET'])
-def index():
-    return "Hola mundo"
+def home():
+    return render_template('home.html',title='Home',logo='WebSite with Python3')
+
+@app.route('/contact', methods=['GET'])
+def contact():
+    return render_template('contact.html',title='Contact',logo='WebSite with Python3')
 
 if __name__ == '__main__':
     app.run(port=PORT,debug=DEBUG)

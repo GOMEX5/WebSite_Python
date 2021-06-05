@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <link rel="shortcut icon" href="{{url_for('static',filename='img/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar nav navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid nv">
+                <a href="/" class="navbar-brand navTitle">
+                    {{logo}}
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><span></button>
+            </div>
+            <div class="collapse nav1 navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="contenedor-carga">
+        <div id="carga"></div>
+    </div>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <footer>
+        <div class="container-fluid cont1" id="about">
+            <div class="row bg-dark text-white p-5 text-center">
+                <div class="col-12 col-sm-6">
+                    <i class="fab fa-python fa-10x"></i>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <h3>The most suscribed Youtuber</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem earum totam ea quasi quia perferendis tenetur ipsam, itaque incidunt non quae illo impedit facilis? Eos fugiat illo harum quaerat iusto!</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{url_for('static',filename='js/app.js')}}"></script>
+    <script src="{{url_for('static',filename='js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>
