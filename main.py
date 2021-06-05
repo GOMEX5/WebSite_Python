@@ -10,7 +10,7 @@ def not_found(error):
 
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('home.html',title='Home',logo='WebSite with Python3')
+    return render_template('home.html',title='WebSite with Python3',logo='WebSite with Python3')
 
 @app.route('/contact', methods=['GET'])
 def contact():
